@@ -1,0 +1,112 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    max-height: 570px;
+}
+.slider:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #06b5a9;
+    opacity: .3;
+    z-index: 9;
+}
+#block-for-slider {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+#viewport {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    text-align: center;
+}
+
+#slidewrapper {
+    position: relative;
+    width: calc(100% * 4);
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    -webkit-transition-timing-function: cubic-bezier(.67,.01,.23,1);
+    -o-transition-timing-function: cubic-bezier(.67,.01,.23,1);
+    transition-timing-function: cubic-bezier(.67,.01,.23,1);
+}
+
+#slidewrapper, #slidewrapper ul, #slidewrapper li {
+    margin: 0;
+    padding: 0;
+}
+
+.slide {
+    width: calc(100%/4);
+    list-style: none;
+    display: inline;
+    float: left;
+}
+.text__slider {
+    position: absolute;
+    top: 260px;
+    left: 405px;
+    z-index: 9999;
+    font-size: 22px;
+    letter-spacing: 35px;
+    color: #ffffff;
+}
+.text__slider p {
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0;
+}
+.slide-img {
+    width: 100%;
+    max-height: 570px;
+}
+
+#prev-btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url(../img/left.png) no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+    top: calc(50% - 25px);  
+}
+#next-btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url(../img/right.png) no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+    top: calc(50% - 25px);
+}
+
+#prev-btn:hover, #next-btn:hover {
+    cursor: pointer;
+}
+
+#prev-btn {
+    left: 20px;
+}
+
+#next-btn {
+    right: 20px;
+}
+
